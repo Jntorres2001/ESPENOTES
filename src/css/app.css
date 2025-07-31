@@ -52,7 +52,7 @@
 }
 .svg--container div {
   height: 210px;
-  background: var(--dark-primary) url('/ESPENODE/espenotes/img/espe.jpg') ;
+  background: var(--dark-primary) url('https://ecuador.unir.net/wp-content/uploads/sites/8/2017/07/UNIR-ESPE-Acuerdo.jpg') no-repeat center center;
   background-position: bottom;
   background-size: cover;
   object-fit: cover;
