@@ -39,12 +39,10 @@ window.addEventListener("load", async () => {
   // Registro del Service Worker
   if ("serviceWorker" in navigator) {
     try {
-      const reg = await navigator.serviceWorker.register("/sw.js", {
-        scope: "/",
-      });
+      const reg = await navigator.serviceWorker.register("/sw.js");
       console.log("Service Worker registrado correctamente");
     } catch (err) {
-      console.error("Error al registrar Service Worker:");
+      console.log("Error al registrar Service Worker:");
     }
   }
 });
