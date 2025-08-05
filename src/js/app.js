@@ -39,7 +39,9 @@ window.addEventListener("load", async () => {
   // Registro del Service Worker
   if ("serviceWorker" in navigator) {
     try {
-      const reg = await navigator.serviceWorker.register("/sw.js");
+      const reg = await navigator.serviceWorker.register("/sw.js", {
+        scope: "/"  
+      });
       console.log("Service Worker registrado correctamente", reg);
     } catch (err) {
       console.error("Error al registrar Service Worker:", err);
