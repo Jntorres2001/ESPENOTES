@@ -93,3 +93,20 @@
   padding: 10px;
   width: calc(var(--width) - 20px);
 }
+
+.app-install-banner {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--primary);
+  color: var(--white);
+}
+.app-install:hover {
+  background-color: var(--light-primary);
+}
+.app-install div:first-child {
+  font-size: 12px;
+  padding: 5px 0 8px 5px;
+  text-align: left;
+}
+
+
