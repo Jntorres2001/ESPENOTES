@@ -102,6 +102,7 @@
 }
 .app-install:hover {
   background-color: var(--light-primary);
+  cursor: pointer;
 }
 .app-install div:first-child {
   font-size: 12px;

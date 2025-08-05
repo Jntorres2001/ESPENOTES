@@ -40,28 +40,26 @@ window.addEventListener("load", async () => {
   if ("serviceWorker" in navigator) {
     try {
       const reg = await navigator.serviceWorker.register("/sw.js", {
-        scope: "/"  
+        scope: "/",
       });
       console.log("Service Worker registrado correctamente", reg);
     } catch (err) {
       console.error("Error al registrar Service Worker:", err);
     }
   }
-
-  // Instalación de la app (botón personalizado)
-  const bannerInstall = document.querySelector("#banner-install");
-  if (bannerInstall) {
-    bannerInstall.addEventListener("click", async () => {
-      if (deferredPrompt) {
-        deferredPrompt.prompt();
-        const response = await deferredPrompt.userChoice;
-        if (response.outcome === "accepted") {
-          console.log("Usuario aceptó la instalación de la PWA");
-        } else {
-          console.log("Usuario rechazó la instalación de la PWA");
-        }
-        deferredPrompt = null;
-      }
-    });
-  }
 });
+
+window.addEventListener('load', async () =>{
+    const bannerInstall = document.querySelector("#banner-install")
+    bannerInstall.addEventListener('click', async ()=>{
+        if(deferredPrompt){
+            deferredPrompt.prompt();
+            const res = await deferredPrompt.userChoice;
+            if(res.outcome =='accepted'){
+                console.log("Usuario acepto la instalacion del promt")
+            }else{
+                console.log('Rechazo la instalacion')
+            }
+        }
+    })
+})
